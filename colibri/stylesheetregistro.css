@@ -1,0 +1,47 @@
+header{
+  border-radius: 1px solid black;
+}
+
+h1{
+  font-size: 1em;
+
+}
+
+body{
+  background: rgb(26, 22, 54);
+}
+
+*{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+label{
+  display: block;
+  margin: .5em 0 0 0;
+}
+
+td{
+  padding-bottom:10px;
+   padding-top:10px;
+}
+
+input{
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #2F2A4C;
+  border: 0;
+  width: 500px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.formulario{
+  text-align: center;
+  margin-left: 25%;
+}
+
+p{
+  text-align: center;
+  padding-top: 2.5em;
+}
