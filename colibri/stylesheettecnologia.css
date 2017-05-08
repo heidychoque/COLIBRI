@@ -1,0 +1,94 @@
+body{
+    font-family: Planer;
+    margin: 0;
+    background-color: rgb(225, 223, 222);
+    background-repeat: no-repeat;
+    background-size: 100% 720px;
+}
+
+.logo img{
+    margin-top: 100px;
+    margin-right: 0;
+    margin-left: 260px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#wrapper{
+    background-color: rgb(26, 22, 54);
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding:0;
+}
+
+#content p{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    padding: 15px;
+}
+
+#div4 {
+    position:relative;
+    top: 100px;
+    width: 28%;
+    float: left;
+    margin-left:  70px;
+    margin-right:  20px;
+    margin-top: -100px;
+    border: 10px  ;
+    aling-items: center;
+    justify-content: center;
+
+}
+
+#div5 {
+    position:relative;
+    top:100px;
+    width: 28%;
+    float: left;
+    margin-left:  20px;
+    margin-right: 20px;
+    margin-top: -100px;
+    border: 10px  ;
+    aling-items: center;
+    justify-content: center;
+}
+
+
+#div6 {
+    position:relative;
+    top: 100px;
+    width: 28%;
+    float: left;
+    margin-left:   20px;
+    margin-right:  20px;
+    margin-top: -100px;
+    border: 10px  ;
+    align-items: center;
+    justify-content: center;
+}
+
+#Texto{
+    font-family: Planer;
+    font-size: 17px;
+    align-content: center;
+    padding-bottom: 10px;
+    background: white;
+}
+
+#Texto1{
+    font-family: Planer;
+    font-size: 17px;
+    align-content: center;
+    padding-bottom: 10px;
+    background: white;
+}
+#Texto2{
+    font-family: Planer;
+    font-size: 17px;
+    align-content: center;
+    padding-bottom: 10px;
+    background: white;
+}
