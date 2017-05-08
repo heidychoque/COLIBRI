@@ -29,7 +29,7 @@
     if(mysqli_num_rows($result1) > 0 && mysqli_num_rows($result2) > 0) {
             //si result2 coincide, que vaua a su perfil
             //si no, entonces crear la cuenta
-            header("Location: file:///C:/Users/Eunkyu/Desktop/colibri/index.html");
+            header("Location: file:///C:/Users/Eunkyu/Desktop/colibri/index2.html");
     }
     elseif (mysqli_num_rows($result1) && mysqli_num_rows($result2) == 0) {
         echo "<script>alert('Ingrese la Contraseña Correcta')</script>";
