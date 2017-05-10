@@ -19,12 +19,12 @@
     //variables para insertar a base de datos
     $nombre = $_POST['Nombre'];
     $email = $_POST['E-mail'];
-    $contras = $_POST['Contraseña'];
+    $contras = $_POST['Contrasena'];
     $pais = $_POST['Pais'];
     $tel = $_POST['Telefono'];
 
-    $insert = "INSERT INTO usuario VALUES ($nombre', '$email', '$contras', '$pais', '$tel')";
-    
+    $insert = "INSERT INTO usuario (Nombre, email, contrasena, pais, telefono) VALUES ('$nombre', '$email', '$contras', '$pais', '$tel')";
+
     //Ejecucion de query
     $result = mysqli_query($conexion, $insert)
         or die ("Error insertar al bd");
