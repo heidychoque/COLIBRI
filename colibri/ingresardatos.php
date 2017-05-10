@@ -10,7 +10,7 @@
     $server = "localhost";
     $user = "root";
     $password = "";
-    $bd = "tienda";
+    $bd = "tienda2";
 
     $conexion = mysqli_connect($server, $user, $password, $bd)
         or die ("Error en la Conexion");
