@@ -1,2 +1,2 @@
 --SAVE IMAGE TO FILE--
-save_string_to_database("upload/" . $_FILES["file"]["name"]);
+save_string_to_localfile("upload/" . $_FILES["file"]["name"]);
