@@ -17,20 +17,18 @@
         echo ("Conexion Ejecutada");
 
     //verify codigo producto
-    $findcodp = "SELECT codproducto FROM producto";
-    $findmax = "SELECT MAX codproducto FROM $findcodp";
-    $result3 = mysqli_query($conexion, $findmax);
-
-    $row = $result3->fetch_assoc();
-    $codprod = $row["codproducto"];
-    echo $codprod;
-    $codsiguiente = $codprod + 1;
+    $query = "SELECT MAX(codproducto) AS max FROM producto";
+    $result3 = mysqli_query($conexion, $query);
+    $row = mysqli_fetch_array($result3);
+    $codmax = $row['max'];
+    echo $codmax;
+    $codprod = $codmax +1;
 
     //Insert image
     $path = '../colibri/Images/';
     file_put_contents($path, $fotos);
 
-    $insert = "INSERT INTO producto (codproducto, precio, descripcion, codcategoria, nombre) VALUES ('$codsiguiente', '$precio', '$descripcion','$codcateg', '$nomprod')";
+    $insert = "INSERT INTO producto (codproducto, precio, descripcion, codcategoria, nombre) VALUES ('$codprod', '$precio', '$descripcion','$codcateg', '$nomprod')";
 
     //Ejecucion de Query
     $result = mysqli_query($conexion, $insert)
