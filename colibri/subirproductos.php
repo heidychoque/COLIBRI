@@ -16,14 +16,21 @@
         or die ("Error en la Conexion");
         echo ("Conexion Ejecutada");
 
-    //variables para insertar a base de datos
-    $nomprod = $_POST['Nombre'];
-    $categ = $_POST['Categoria'];
-    $precio = $_POST['Precio'];
-    $descripcion = $_POST['Descripcion'];
-    $fotos = $_POST['Archivo1'];
+    //verify codigo producto
+    $findcodp = "SELECT codproducto FROM producto";
+    $findmax = "SELECT MAX codproducto FROM $findcodp";
+    $result3 = mysqli_query($conexion, $findmax);
 
-    $insert = "INSERT INTO usuario VALUES ('$nomprod', '$categ', '$precio', '$descripcion', '$fotos')";
+    $row = $result3->fetch_assoc();
+    $codprod = $row["codproducto"];
+    echo $codprod;
+    $codsiguiente = $codprod + 1;
+
+    //Insert image
+    $path = '../colibri/Images/';
+    file_put_contents($path, $fotos);
+
+    $insert = "INSERT INTO producto (codproducto, precio, descripcion, codcategoria, nombre) VALUES ('$codsiguiente', '$precio', '$descripcion','$codcateg', '$nomprod')";
 
     //Ejecucion de Query
     $result = mysqli_query($conexion, $insert)
@@ -32,5 +39,6 @@
         //Desconectar
         mysqli_close($conexion);
         echo "Datos insertados correctamente";
+
 
 ?>
