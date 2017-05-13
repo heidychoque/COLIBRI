@@ -16,6 +16,22 @@
         or die ("Error en la Conexion");
         echo ("Conexion Ejecutada");
 
+    //variables para insertar a base de datos
+    $nomprod = $_POST['Nombre'];
+    $categ = $_POST['Categoria'];
+    $precio = $_POST['Precio'];
+    $descripcion = $_POST['Descripcion'];
+    $fotos = $_POST['Archivo1'];
+    echo $fotos;
+
+    //verify categoria
+    $findcateg = "SELECT codcategoria FROM categoria WHERE categoria ='$categ'";
+    $result2 = mysqli_query($conexion, $findcateg);
+
+    $row = $result2->fetch_assoc();
+    $codcateg = $row["codcategoria"];
+    echo $codcateg;
+
     //verify codigo producto
     $query = "SELECT MAX(codproducto) AS max FROM producto";
     $result3 = mysqli_query($conexion, $query);
