@@ -1,7 +1,7 @@
 <?php foreach ($products as $product) : ?>
 <div id="productos">
     <div id="div4"> <!--producto-->
-        <a href=""></a> <img src="<?php echo base_url(); ?>axxets/images/productos/<?php echo $product->image?>" width=100% height=200 > </a> <!--imagen-->
+        <a href=""></a> <img src="<?php echo base_url(); ?>assets/images/productos/<?php echo $product->image?>" width=100% height=200 > </a> <!--imagen-->
 
         <div id="Texto">  <BR>  Nombre: <?php echo $product->nombre;?> <br> Precio: <?php echo $product->precio;?> </div><!--Texto de la imagen-->
 
