@@ -29,12 +29,13 @@
     $result2 = mysqli_query($conexion, $findcateg);
 
     //Ingresar categoria
+    //Si existe categoria ingresado
     if(mysqli_num_rows($result2) > 0) {
         $row = $result2->fetch_assoc();
         $codcateg = $row["codcategoria"];
         echo $codcateg;
     }
-    //No existe categoria
+    //Si no existe categoria ingresado
     else {
         $query2 = "SELECT MAX(codcategoria) AS max FROM categoria";
         $result4 = mysqli_query($conexion, $query2);
