@@ -28,9 +28,24 @@
     $findcateg = "SELECT codcategoria FROM categoria WHERE categoria ='$categ'";
     $result2 = mysqli_query($conexion, $findcateg);
 
-    $row = $result2->fetch_assoc();
-    $codcateg = $row["codcategoria"];
-    echo $codcateg;
+    //Ingresar categoria
+    if(mysqli_num_rows($result2) > 0) {
+        $row = $result2->fetch_assoc();
+        $codcateg = $row["codcategoria"];
+        echo $codcateg;
+    }
+    //No existe categoria
+    else {
+        $query2 = "SELECT MAX(codcategoria) AS max FROM categoria";
+        $result4 = mysqli_query($conexion, $query2);
+        $row2 = mysqli_fetch_array($result4);
+        $codmax2 = $row2['max'];
+        echo $codmax2;
+        $codcateg = $codmax2 +1;
+
+        $insert2 = "INSERT INTO categoria (codcategoria, categoria) VALUES ('$codcateg', '$categ')";
+        $result5 = mysqli_query($conexion, $insert2);
+    }
 
     //verify codigo producto
     $query = "SELECT MAX(codproducto) AS max FROM producto";
